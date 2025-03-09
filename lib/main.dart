@@ -40,9 +40,34 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          
+          //icons linking to the pages
+          children: [
+            Icon(Icons.account_balance, color: Colors.deepPurple, size: 100),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const BankingScreen()),
+                );
+              },
+              child: const Text('Banking'),
+            ),
+            SizedBox(height: 20),
+            Icon(Icons.build, color: Colors.deepPurple, size: 100),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ToolScreen()),
+                );
+              },
+              child: const Text('Tool'),
+            ),
+          ],
         ),
       ),
+
+
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -84,6 +109,9 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
+
+
     );
+
   }
 }
