@@ -29,7 +29,7 @@ Widget build(BuildContext context) {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const ToolScreen()),
+                MaterialPageRoute(builder: (context) => ToolScreen()),
               );
             },
             child: const Text('Tool'),
